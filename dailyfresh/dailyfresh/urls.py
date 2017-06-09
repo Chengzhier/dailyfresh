@@ -18,5 +18,11 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url('^',include('df_user.urls')),
+    url('^user/',include('df_user.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
+    url('^',include('df_goods.urls')),
+    url('^search/$',include('haystack.urls')),
+    url('^cart/',include('df_cart.urls')),
+    url('^order/',include('df_order.urls')),
+
 ]
